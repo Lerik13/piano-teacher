@@ -31,13 +31,13 @@ input, textarea, button {
   --bkg2-light: hsl(26, 37%, 96%);
   --shadow-light: 20px 20px 50px hsl(255, 36%, 17%, .35), -30px -30px 50px hsl(26, 37%, 96%, .15);
 
-  --text-dark: hsl(217, 54%, 88%); //hsl(217, 54.2%, 88%);
+  --text-dark: hsl(217, 54.2%, 88%);
   --accent1-dark: hsl(175, 100%, 31%);
   --accent2-dark: hsl(21, 84%, 56%);
   --accent3-dark: hsl(40, 89%, 65%);
-  --bkg1-dark: hsl(218, 15%, 10%); //hsl(218, 15.4%, 10.2%)
-  --bkg2-dark: hsl(218, 15%, 19%);//hsl(218, 14.7%, 18.7%);
-  --shadow-dark: 20px 20px 50px hsl(255, 36%, 17%, .35), -30px -30px 50px hsl(26, 37%, 96%, .15);
+  --bkg1-dark: hsl(218, 15.4%, 10.2%);
+  --bkg2-dark: hsl(218, 14.7%, 18.7%);
+  --shadow-dark: 20px 20px 50px hsl(255, 36%, 17%, .35), -30px -30px 50px hsl(26, 37%, 26%, .15);
 }
 
 @media(prefers-color-scheme: dark) {
@@ -62,6 +62,26 @@ input, textarea, button {
 		--shadow: var(--shadow-light);
 	}
 }
+
+[color-scheme="dark"] {
+	--text: var(--text-dark);
+	--accent1: var(--accent1-dark);
+	--accent2: var(--accent2-dark);
+	--accent3: var(--accent3-dark);
+	--bkg1: var(--bkg1-dark);
+	--bkg2: var(--bkg2-dark);
+	--shadow: var(--shadow-dark);
+}
+[color-scheme="light"] {
+	--text: var(--text-light);
+	--accent1: var(--accent1-light);
+	--accent2: var(--accent2-light);
+	--accent3: var(--accent3-light);
+	--bkg1: var(--bkg1-light);
+	--bkg2: var(--bkg2-light);
+	--shadow: var(--shadow-light);
+}
+
 /* utility classes */
 /* text color */
 .text {
@@ -186,6 +206,21 @@ nav {
   width: clamp(160px, 69.2307695px + 23.076923vw, 300px);
   background-color: var(--bkg1);
   position: relative;
+}
+
+.theme {
+	background-color: var(--text);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 3px solid var(--bkg1);
+	cursor: pointer;
+	display: grid;
+	place-items: center;
+}
+.theme:is(:hover, :focus) {
+	background-color: var(--accent1);
+	opacity: .8;
 }
 
 body {
