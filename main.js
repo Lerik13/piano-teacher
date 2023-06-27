@@ -1,4 +1,6 @@
-import './style.css'
+import "./style.css";
+import "toastify-js/src/toastify.css";
+import Toastify from 'toastify-js'
 
 const themeBtn = document.querySelector('.theme');
 
@@ -36,3 +38,39 @@ themeBtn.addEventListener('click', () => {
 window.addEventListener('DOMContentLoaded', () => {
 	loadTheme(getCurrentTheme())
 })
+
+/*
+const form = document.getElementById('form');
+const email = document.getElementById('email');
+
+form.addEventListener('submit', () => {
+
+	var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	
+	if (!email.value.match(validRegex)) {
+		showError('Invalid email address');
+		email.focus();
+		return false;
+	}
+	showMessage('Your email was sent successfully')
+	email.value = ''
+})
+*/
+function showError(error) {
+	Toastify({
+		text: error,
+		className: "info",
+		style: {
+			background: "linear-gradient(to right, #ff4554, #ffc271)",
+		}
+	}).showToast();
+}
+function showMessage(msg) {
+	Toastify({
+		text: msg,
+		className: "info",
+		style: {
+			background: "linear-gradient(to right, #00b09b, #96c93d)",
+		}
+	}).showToast();
+}
