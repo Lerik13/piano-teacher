@@ -1,4 +1,7 @@
-*, *::after, *::before {
+&::after {
+	content: '';
+	
+}*, *::after, *::before {
   border: 0;
   margin: 0;
   padding: 0;
@@ -17,6 +20,18 @@ input, textarea, button {
   -webkit-border-radius: 0;
 }
 
+a:link{
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
 /* Colors */
 
 :root {
@@ -418,8 +433,10 @@ header {
 }
 
 .connect {
-  padding: 3rem 2rem;
-  margin-top: 3rem;
+  padding: 0 0 3rem 0;
+  //padding: 0 2rem 3rem 2rem;
+  //padding: 3rem 2rem;
+  //margin-top: 3rem;
 }
 
 .connect-form {
@@ -453,13 +470,30 @@ header {
   cursor: pointer;
 }
 
-footer div {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 1.5rem;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+footer {
+	padding: 1rem;
+}
+.footer-inner {
+	flex-direction: row;
+}
+.footer__mail {
+	margin: 0;
+}
+
+footer a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+footer span {
+	padding-left: 10px;
+	color: var(--bkg2);
+}
+
+.footer__developer span{
+	padding-right: 10px;
+	text-align: right;
+	color: var(--text)
 }
 
 .footer-icons {
@@ -471,6 +505,27 @@ footer div {
   filter: drop-shadow(1px 1px 1px var(--text));
 }
 
+@media only screen and (max-width: 698px){
+	.footer-inner {
+		flex-direction: column;
+	}
+	.footer__mail {
+		margin: 1rem 0;
+	}
+}
+
+
+.students {
+	background: var(--bkg1) url('./images/students-small.jpg') no-repeat top center;
+	height: 450px;
+}
+
+@media only screen and (min-width: 623px){
+	.students {
+		background: var(--bkg1) url('./images/students.jpg') no-repeat fixed center;
+		height: 500px;
+	}
+}
 
 @media only screen and (max-width: 1075px){
   header {
