@@ -60,7 +60,7 @@ const handleSubmit = (event) => {
 		headers: { "Content-Type": "application/x-www-form-urlencoded" },
 		body: new URLSearchParams(formData).toString(),
 	})
-		.then(() => showMessage('Your email was sent successfully'))
+		.then(() => { showMessage('Your email was sent successfully'); email.value=''; })
 		.catch((error) => showError(error));
 };
 
