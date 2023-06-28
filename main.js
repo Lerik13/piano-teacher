@@ -6,7 +6,7 @@ const themeBtn = document.querySelector('.theme');
 
 function getCurrentTheme() {
 	let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-	localStorage.getItem('canabrey.theme') ? theme = localStorage.getItem('canabrey.theme') : null;
+	localStorage.getItem('victoria-piano.theme') ? theme = localStorage.getItem('victoria-piano.theme') : null;
 	return theme;
 }
 function loadTheme(theme) {
@@ -31,7 +31,7 @@ themeBtn.addEventListener('click', () => {
 	}
 	audio.currentTime = 0;
 	audio.play();
-	localStorage.setItem('canabrey.theme', `${theme}`)
+	localStorage.setItem('victoria-piano.theme', `${theme}`)
 	loadTheme(theme)
 })
 

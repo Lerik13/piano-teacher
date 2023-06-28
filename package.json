@@ -1,11 +1,10 @@
 {
-  "name": "canabrey-studios",
+  "name": "piano teacher",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
-    "n-dev": "netlify dev"
+    "serve": "vite preview"
   },
   "devDependencies": {
     "vite": "^4.3.9"
