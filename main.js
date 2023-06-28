@@ -1,6 +1,6 @@
-import "./style.css";
-import "toastify-js/src/toastify.css";
-import Toastify from 'toastify-js'
+import './style.css';
+import 'toastify-js/src/toastify.css';
+import Toastify from 'toastify-js';
 
 const themeBtn = document.querySelector('.theme');
 
@@ -39,23 +39,33 @@ window.addEventListener('DOMContentLoaded', () => {
 	loadTheme(getCurrentTheme())
 })
 
-/*
-const form = document.getElementById('form');
-const email = document.getElementById('email');
 
-form.addEventListener('submit', () => {
-
+const handleSubmit = (event) => {
+	event.preventDefault();
+	
+	const email = document.getElementById('email');
 	var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 	
 	if (!email.value.match(validRegex)) {
 		showError('Invalid email address');
 		email.focus();
-		return false;
+		return;
 	}
-	showMessage('Your email was sent successfully')
-	email.value = ''
-})
-*/
+
+	const myForm = event.target;
+	const formData = new FormData(myForm);
+
+	fetch("/", {
+		method: "POST",
+		headers: { "Content-Type": "application/x-www-form-urlencoded" },
+		body: new URLSearchParams(formData).toString(),
+	})
+		.then(() => showMessage('Your email was sent successfully'))
+		.catch((error) => showError(error));
+};
+
+document.querySelector("form").addEventListener("submit", handleSubmit);
+
 function showError(error) {
 	Toastify({
 		text: error,
