@@ -516,14 +516,14 @@ footer span {
 
 
 .students {
-	background: var(--bkg1) url('./images/students-small.jpg') no-repeat top center;
-	height: 450px;
+	background: var(--bkg1) url('./images/students.jpg') no-repeat fixed center;
+	height: 500px;
 }
 
-@media only screen and (min-width: 623px){
+@media only screen and (max-width: 844px){
 	.students {
-		background: var(--bkg1) url('./images/students.jpg') no-repeat fixed center;
-		height: 500px;
+		background-attachment: scroll;
+		height: 400px;
 	}
 }
 
