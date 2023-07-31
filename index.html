@@ -7,7 +7,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Victoria Kalashnikov - piano teacher in Edmonton Alberta">
+		<meta name="description" content="Victoria Kalashnikov - piano teacher in Edmonton Alberta Canada">
+		<meta name="keywords" content="Victoria Kalashnikov, piano, piano teacher, Edmonton, Alberta, Canada">
 		<title>Victoria Kalashnikov - piano teacher</title>
 	</head>
 	<body>
@@ -45,24 +46,33 @@
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M78.3889 72V61.4883H0V72H78.3889Z" class="accent1"/>
 						</g>
 					</svg>
-					<button class="theme" role="switch" aria-label="light/dark mode"></button>
-					<audio src="/audio/light-on.mp3" class="theme-audio--light-on" data-attribute="adapted from freesound.org"></audio>
-					<audio src="/audio/light-off.mp3" class="theme-audio--light-off" data-attribute="adapted from freesound.org"></audio>
+					<div class="nav_buttons">
+						<select class="lang">
+							<option selected value="en">En</option>
+							<option value="ru">Ru</option>
+						</select>
+						<button class="theme" role="switch" aria-label="light/dark mode"></button>
+						<audio src="/audio/light-on.mp3" class="theme-audio--light-on" data-attribute="adapted from freesound.org"></audio>
+						<audio src="/audio/light-off.mp3" class="theme-audio--light-off" data-attribute="adapted from freesound.org"></audio>
+					</div>
 				</div>
 			</nav>
 			<header>
 				<div class="meet">
-					<p class="text-small accent2">Meet Victoria</p>
-					<h2>Your Kind of Piano Teacher</h2>
-					<p>
+					<p class="text-small accent2" id="teacher_name">Meet Victoria</p>
+					<h2 id="intro_header">Your Kind of Piano Teacher</h2>
+					<p id="intro_text">
 						My name is Victoria Kalashnikov. I have been teaching piano and theory for over 35 years to students of all ages and levels.
 						In 2022 I was recognized Top Piano Teacher by Steinway and Sons as voted by Piano Centre Edmonton.
 					</p>
-					<a href="#method" class="btn accent1-bg bkg1-link">My teaching method</a>
+					<a href="#method" class="btn accent1-bg bkg1-link" id="intro_btn">My teaching method</a>
 				</div>
 				<div class="meet-img">
 					<img src="./images/image 1.jpg" alt="Victoria Kalashnikov" class="meet-img__teacher">
-					<a href="#form" class="btn btn-connect bkg2-bg text-link"><strong>Interested in learning? <span class="accent1-link">Let’s Connect!</span></strong> <img width="20px" src="./images/wave.png" alt="Emoji Wave"></a>
+					<a href="#form" class="btn btn-connect bkg2-bg text-link">
+						<span id="intro_connect1">Interested in learning?</span>
+						<span class="accent1-link" id="intro_connect2">Let’s Connect!</span>
+					</a>
 				</div>
 			</header>
 
@@ -71,9 +81,9 @@
 					<path d="M230.5 98.5L228.279 95.1731L228.26 95.1862L228.24 95.1995L230.5 98.5ZM435.5 104L431.522 104.419L435.5 104ZM306 219.5L303.749 222.806L306 219.5ZM282.5 143L279.074 140.936L279.074 140.936L282.5 143ZM642 116L629.503 71.5346L597.244 104.59L642 116ZM0.283992 3.4803C8.3097 23.6273 16.7889 46.7695 27.366 68.2073C37.9485 89.6562 50.8316 109.842 67.9419 124.075C85.1841 138.418 106.594 146.605 133.778 144.172C160.791 141.754 193.211 128.88 232.76 101.8L228.24 95.1995C189.289 121.87 158.188 133.955 133.065 136.203C108.114 138.437 88.7742 130.999 73.0581 117.925C57.2101 104.742 44.9265 85.7188 34.5403 64.6677C24.1486 43.6055 15.857 20.956 7.71601 0.519701L0.283992 3.4803ZM232.721 101.827C264.37 80.7001 312.248 55.8433 353.299 49.3636C373.823 46.1238 392.029 47.5761 405.645 55.7105C419.051 63.7192 428.815 78.7025 431.522 104.419L439.478 103.581C436.585 76.0975 425.882 58.4808 409.748 48.8427C393.825 39.3302 373.418 38.0887 352.051 41.4614C309.318 48.2067 260.297 73.7999 228.279 95.1731L232.721 101.827ZM431.522 104.419C434.963 137.106 430.408 161.335 421.533 179.045C412.674 196.724 399.369 208.192 384.775 215.165C370.132 222.162 354.16 224.64 340.141 224.201C325.998 223.757 314.382 220.368 308.251 216.194L303.749 222.806C311.618 228.164 324.94 231.728 339.89 232.197C354.965 232.67 372.243 230.019 388.225 222.383C404.256 214.723 418.951 202.054 428.685 182.629C438.404 163.236 443.037 137.394 439.478 103.581L431.522 104.419ZM308.251 216.194C296.975 208.516 287.05 197.723 282.146 185.402C277.306 173.243 277.266 159.437 285.926 145.064L279.074 140.936C269.045 157.579 269.005 174.023 274.713 188.36C280.355 202.535 291.525 214.484 303.749 222.806L308.251 216.194ZM285.926 145.064C297.12 126.487 321.854 105.433 357.247 89.0031C392.535 72.6213 438.086 61 490.5 61V53C436.914 53 390.215 64.8787 353.878 81.7469C317.646 98.5667 291.38 120.513 279.074 140.936L285.926 145.064ZM490.5 61C541.888 61 587.413 77.779 614.135 94.2594L618.335 87.4502C590.459 70.2583 543.494 53 490.5 53V61Z" class="accent3"/>
 				</svg>
 				<div class="method-header">
-					<p class="text-small accent3">A Proven Focus</p>
-					<h2>Teaching Method</h2>
-					<p>
+					<p class="text-small accent3" id="method_focus">A Proven Focus</p>
+					<h2 id="method_header">Teaching Method</h2>
+					<p id="method_text">
 						My method is based on introducing the magical world of music by engaging my students in activities that develop their creativity, critical and abstract thinking, and discipline.
 						Students are encouraged to discover ways to analyze and express their own feelings through playing.
 						My goal is to instill a lifelong love and respect for music. Specifically, my classes involve:
@@ -82,28 +92,28 @@
 				<div class="cards">
 					<div class="card bkg2-bg">
 						<span class="h3 accent3 bkg2-bg">1</span>
-						<h3>Implement</h3>
-						<p>Implementing an individual approach to each student’s unique abilities.</p>
+						<h3 id="method_1_header">Implement</h3>
+						<p id="method_1_text">Implementing an individual approach to each student’s unique abilities.</p>
 					</div>
 					<div class="card bkg2-bg">
 						<span class="h3 accent3 bkg2-bg">2</span>
-						<h3>Develop</h3>
-						<p>Developing strong professional skills such as technique, sight reading, and ear training.</p>
+						<h3 id="method_2_header">Develop</h3>
+						<p id="method_2_text">Developing strong professional skills such as technique, sight reading, and ear training.</p>
 					</div>
 					<div class="card bkg2-bg">
 						<span class="h3 accent3 bkg2-bg">3</span>
-						<h3>Introduce</h3>
-						<p>Introducing the basic rudiments of musical theory and history.</p>
+						<h3 id="method_3_header">Introduce</h3>
+						<p id="method_3_text">Introducing the basic rudiments of musical theory and history.</p>
 					</div>
 					<div class="card bkg2-bg">
 						<span class="h3 accent3 bkg2-bg">4</span>
-						<h3>Foster</h3>
-						<p>Fostering an environment for self motivation and self discipline.</p>
+						<h3 id="method_4_header">Foster</h3>
+						<p id="method_4_text">Fostering an environment for self motivation and self discipline.</p>
 					</div>
 					<div class="card bkg2-bg">
 						<span class="h3 accent3 bkg2-bg">5</span>
-						<h3>Build</h3>
-						<p>Building up students’ confidence, intellectual curiosity, emotional intelligence, focus.</p>
+						<h3 id="method_5_header">Build</h3>
+						<p id="method_5_text">Building up students’ confidence, intellectual curiosity, emotional intelligence, focus.</p>
 					</div>
 				</div>
 			</section>
@@ -114,19 +124,19 @@
 				</svg>
 				<div class="container">
 					<div class="options-header">
-						<p class="text-small accent2">Options for everyone</p>
-						<h2>Two Lesson Options</h2>
-						<p>I live in Edmonton, Alberta Canada. I love teaching piano to local students, but know that finding a good piano teacher where you live isn’t always possible. For several years now, I’ve taught students online—Zoom, Google Meet, Skype, Facetime, or whatever works best for you.</p>
+						<p class="text-small accent2" id="options_everyone">Options for everyone</p>
+						<h2 id="options_header">Two Lesson Options</h2>
+						<p id="options_text">I live in Edmonton West end, Alberta Canada. I love teaching piano to local students, but know that finding a good piano teacher where you live isn’t always possible. For several years now, I’ve taught students online — Watsup, Viber, Skype, or whatever works best for you.</p>
 					</div>
 				</div>
 				<div class="cards">
 					<div class="card options-card bkg2-bg">
-						<span class="h4 accent2 bkg2-bg">In-Person</span>
-						<p>I teach local students in my piano studio and am available for lessons Monday–Saturday from 8AM to 8PM.</p>
+						<span class="h4 accent2 bkg2-bg" id="options_1_header">In-Person</span>
+						<p id="options_1_text">I teach local students in my piano studio and am available for lessons Monday–Saturday from 8AM to 8PM.</p>
 					</div>
 					<div class="card options-card bkg2-bg">
-						<span class="h4 accent2 bkg2-bg">Online</span>
-						<p>I’m happy to teach students online (ages 10+) and am available Monday–Saturday from 8<small>AM</small> to 8<small>PM</small> EST.</p>
+						<span class="h4 accent2 bkg2-bg" id="options_2_header">Online</span>
+						<p id="options_2_text">I’m happy to teach students online (ages 10+) and am available Monday–Saturday from 8<small>AM</small> to 8<small>PM</small> EST.</p>
 					</div>
 				</div>
 			</section>
@@ -134,8 +144,8 @@
 			<section class="connect bkg2-bg" id="connect">
 				<div class="students"></div>
 				<div class="connect-form bkg2 accent1-bg">
-					<h3>Let’s Connect!</h3>
-					<p>Interested in learning? Let’s connect! Send me your email, and I’ll reach out.</p>
+					<h3 id="connect_header">Let’s Connect!</h3>
+					<p id="connect_text">Interested in learning? Let’s connect! Send me your email, and I’ll reach out.</p>
 					<form name="contact" id="form" method="POST" data-netlify="true">
 						<label for="email">
 							<input type="email" id="email" name="email" autocomplete="email">

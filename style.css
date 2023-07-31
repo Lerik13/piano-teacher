@@ -217,6 +217,12 @@ nav {
   align-items: center;
 }
 
+.nav_buttons {
+	width: 160px;
+	display: flex;
+	justify-content: space-between;
+}
+
 .nav-logo {
   width: clamp(160px, 69.2307695px + 23.076923vw, 300px);
   background-color: var(--bkg1);
@@ -357,6 +363,20 @@ header {
   position: relative;
   text-align: right;
   bottom: clamp(1rem, -1.54545463rem + 11.636364vw, 5rem);
+	font-weight: bold;
+}
+#intro_connect2 {
+	position: relative;
+	padding-right: 30px;
+}
+#intro_connect2::after {
+	content: "";
+	background: center / contain no-repeat url("./images/wave.png");
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20px;
+	height: 20px;
 }
 
 .method, .options {
@@ -381,7 +401,7 @@ header {
 }
 
 .cards {
-  max-width: 900px;
+  max-width: 1020px;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -392,7 +412,7 @@ header {
 }
 
 .card {
-  max-width: 270px;
+  max-width: 310px;
   display: grid;
   grid-gap: .5rem;
   padding: 3rem 2rem 2rem;
@@ -527,11 +547,19 @@ footer span {
 	}
 }
 
+#method_focus {
+	text-align: left;
+}
+
 @media only screen and (max-width: 1075px){
   header {
     display: grid;
     grid-template: auto auto / 1fr;
   }
+
+	#method_focus {
+		text-align: center;
+	}
 }
 
 @media only screen and (max-width: 520px){
@@ -559,4 +587,36 @@ footer span {
   .connect-form {
     padding: 1.5rem;
   }
+}
+
+select {
+  /* Reset */
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 100px;
+  height: 50px;
+  padding: 0 4em 0 1em;
+  background: url("./images/caret-down.svg")
+    no-repeat right 0.8em center / 1.4em,
+    var(--bkg1);
+  color: var(--text);
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+  /* <option> colors */
+select option {
+  color: var(--text);
+  background-color: var(--bkg1);
+}
+  /* Remove focus outline */
+select &:focus {
+  outline: none;
+}
+  /* Remove IE arrow */
+select &::-ms-expand {
+  display: none;
 }
