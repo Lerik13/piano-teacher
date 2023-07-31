@@ -599,7 +599,7 @@ select {
   width: 100px;
   height: 50px;
   padding: 0 4em 0 1em;
-  background: url("./images/caret-down.svg")
+  background: url('/img/caret-down.svg')
     no-repeat right 0.8em center / 1.4em,
     var(--bkg1);
   color: var(--text);
