@@ -1,6 +1,6 @@
 # Landing Page for Piano Teacher
 
-[link to web-site](https://ta-photograph.netlify.app/) 
+[link to web-site](https://victoriapiano.ca/) 
 
 Responsive web-page for piano teacher with information about her teaching method, "About" block, "options for students" and Contact Form.
 
